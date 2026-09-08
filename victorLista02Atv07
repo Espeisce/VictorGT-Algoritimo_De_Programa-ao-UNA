@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class FinanciamentoSimples {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        // 1. Entrada de dados
+        System.out.print("Digite sua renda mensal: R$ ");
+        double renda = leitor.nextDouble();
+
+        System.out.print("Digite o valor da prestação desejada: R$ ");
+        double prestacao = leitor.nextDouble();
+
+        // 2. Calcula o limite seguro (30% da renda)
+        double limiteMaximo = renda * 0.30;
+
+        // 3. Checagem das regras do banco
+        if (prestacao > 3000 && renda < 10000) {
+            System.out.println("Financiamento negado por baixa renda");
+        } else if (prestacao > limiteMaximo) {
+            System.out.println("Financiamento negado por alta prestação");
+        } else {
+            System.out.println("Financiamento aprovado");
+        }
+
+      
+    }
+}

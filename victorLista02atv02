@@ -1,0 +1,35 @@
+
+
+import java.util.Scanner;
+
+
+public class Exercicio2 {
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+
+
+       System.out.print("Informe o consumo do mês (em kWh): ");
+       double consumo = scanner.nextDouble();
+
+
+       double tarifa;
+
+
+       if (consumo <= 100) {
+           tarifa = 0.50;
+       } else if (consumo <= 200) {
+           tarifa = 0.70;
+       } else {
+           tarifa = 0.90;
+       }
+
+
+       double valorTotal = consumo * tarifa;
+
+
+       System.out.printf("Tarifa aplicada: R$ "+ tarifa);
+       System.out.printf("Valor total da conta: R$ ", valorTotal);
+      
+   }
+}
+

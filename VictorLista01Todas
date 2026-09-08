@@ -1,0 +1,391 @@
+import java.util.Scanner;
+class HelloCodiva {
+  
+  public static void main(String[] args) {
+    
+  
+   System.out.println("MONTE SEU SANDUICHE!");
+    
+      Scanner scanner = new Scanner(System.in); 
+    
+    System.out.println("DIGA QUANTOS PÃES TEM: ");
+    
+    int pao = scanner.nextInt();
+   
+    System.out.println("DIGA QUANTAS ALFACES TEM: ");
+    
+    int alface = scanner.nextInt();
+    
+     System.out.println("DIGA QUANTAS FATIAS DE QUEIJO TEM: ");
+    
+    int queijo = scanner.nextInt();
+    
+     System.out.println("DIGA QUANTAS FATIAS DE PRESUNTO TEM: ");
+    
+    int presunto = scanner.nextInt();
+    
+  int misto = (pao + alface + queijo + presunto);
+    
+   if(pao < 2){ 
+    System.out.println("SEU SANDUICHE VAI TER SO UM PAO?");}else{
+    if (misto == 5 ){
+      System.out.println("SEU SANDUICHE E BEM COMUN!");
+    }else{ 
+   
+      if(misto > 5){
+      System.out.println("SEU SANDUICHE E BEM GRANDE!");
+    }else{
+    System.out.println("SEU SANDUICHE E BEM PEQUENO!");   
+    }}
+      System.out.println("SEU SANDUICHE TEM " + misto + " INGREDIENTES");
+    
+  }
+    
+}
+  }
+
+
+
+—---------------------------
+import java.util.Scanner;
+
+
+public class Exemplo2 {
+   public static void main(String[] args) {
+       int numeroUm;
+       int numeroDois;
+       int resultado;
+       // Scanner permite realizar a leitura de dados
+       // de uma fonte específica
+       Scanner entrada = new Scanner(System.in);
+
+
+       System.out.println(".| Programa para somar " +
+               "dois números inteiros |.\n");
+
+
+       System.out.print("Informe o " +
+               "primeiro número: ");
+
+
+       numeroUm = entrada.nextInt();
+
+
+       System.out.print("Informe o " +
+               "segundo número: ");
+
+
+       numeroDois = entrada.nextInt();
+
+
+       resultado = numeroDois + numeroUm;
+
+
+       System.out.println();
+       // O símbolo de adição é usado para fazer a contatenção dos dados
+       System.out.println("O resultado da soma é: " + resultado);
+       // Outra maneira de fazer a concatenação do conteúdos
+       System.out.printf("%d + %d = %d\n", numeroUm, numeroDois, resultado);
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+class polarExercicio01Aula03 {
+
+
+   public static void main(String[] args) {
+       // titulo
+       System.out.println(" --- NOME COMPLET --- ");
+       // CODIGO
+      
+       Scanner scanner = new Scanner(System.in);
+
+
+       System.out.println("DIGA SEU PRINMEIRO NOME : ");
+
+
+       String pnome = scanner.nextLine();
+
+
+       System.out.println("DIGA SEU SOBRENOME: ");
+
+
+       String sobnome = scanner.nextLine();
+
+
+
+
+       System.out.println("VOCE E " + pnome + " " + sobnome);
+
+
+
+
+   }
+
+
+}
+
+
+import java.util.Scanner;
+class polarExercicio02Aula03 {
+
+
+   public static void main(String[] args) {
+//TITULO
+       System.out.println("-- ENDEREÇO --");
+
+
+       // VARIAVEIS
+
+
+       String rua;
+       String bairro;
+       String num;
+       String cidade;
+       String cep;
+
+
+
+
+       Scanner dados = new Scanner(System.in);
+
+
+       System.out.println("QUAL O NOME DA SUA RUA ? (EX: RUA ALEGRE ) :");
+       rua = dados.nextLine();
+
+
+       System.out.println("QUAL O NOME DO SEU BAIRRO ? (EX: BAIRRO DA FELICIDADE) :");
+       bairro = dados.nextLine();
+
+
+       System.out.println("QUAL O NUMERO DA SUA CASA ? (EX: 10 A ) :");
+       num = dados.nextLine();
+
+
+       System.out.println("QUAL O NOME DA SUA CIDADE E SEU ESTADO ? (EX: SETE LAGOAS MG ) :");
+       cidade = dados.nextLine();
+
+
+       System.out.println("QUAL SEU CEP ? (EX: 00000-094 ) :");
+       cep = dados.nextLine();
+
+
+       System.out.println("SEU ENDEREÇO E " + rua + ", " + num + ", " + bairro + ", " + cidade + ", " + cep + ".");
+   }
+   }
+
+import java.util.Scanner;
+class HelloCodiva {
+  
+  public static void main(String[] args) {
+    
+    int operacao;
+    int num1;
+    int num2;
+    int resultado;
+    System.out.println("---CALCULADORA 2.0---");
+    
+    Scanner num = new Scanner(System.in);
+    
+   //MENU OPCOES
+   
+    System.out.println("---QUAL CONTA VC DESEJA FAZER ?---");
+    System.out.println("- SOMA = 1");
+    System.out.println("- SUBTRAÇAO = 2");
+    System.out.println("- MULTIPLICAÇAO = 3");
+    
+     operacao = num.nextInt();
+    
+            // LOGICA 
+    
+    if (operacao > 3){
+      System.out.println("--- VISH , VOCE NAO DIGITOU UM VALOR CORRESPONDENTE AO MENU!");
+      
+    }
+    
+    //SUBTRACAO
+    
+    if (operacao == 2){
+       System.out.println("---QUAIS NUMEROS SERAO SUBTRAIDOS ?---");
+      System.out.println("PRIMEIRO NUMERO:");
+      num1 = num.nextInt();
+       System.out.println("SEGUNDO NUMERO: ");
+           num2 = num.nextInt();
+      resultado = (num1 - num2);
+       System.out.print("O RESULTADO E " + resultado);
+    }
+     
+    // SOMA
+    
+    if (operacao == 1){
+       System.out.println("---QUAIS NUMEROS SERAO SOMADOS ?---");
+      System.out.println("PRIMEIRO NUMERO:");
+      num1 = num.nextInt();
+       System.out.println("SEGUNDO NUMERO: ");
+           num2 = num.nextInt();
+      resultado = (num1 + num2);
+       System.out.print("O RESULTADO E " + resultado);
+    }
+    
+    // MULTIPLICAÇAO
+    
+     if (operacao == 3){
+       System.out.println("---QUAIS NUMEROS SERAO MULTIPLICADOS");
+      System.out.println("PRIMEIRO NUMERO:");
+      num1 = num.nextInt();
+       System.out.println("SEGUNDO NUMERO: ");
+           num2 = num.nextInt();
+      resultado = (num1 * num2);
+       System.out.print("O RESULTADO E " + resultado);
+    }
+  }
+  
+}
+
+
+
+
+atualizacao 
+
+
+import java.util.Scanner;
+class VictorGTLista01EX01 {
+
+
+   public static void main(String[] args) {
+
+
+       int operacao;
+       int num1 ;
+       int num2;
+       double num3 = 0;
+       double num4 = 0;
+       double num5 = 0;
+       double resultado;
+       double somaMed;
+
+
+       System.out.println("---CALCULADORA 2.0---");
+
+
+       Scanner num = new Scanner(System.in);
+
+
+       //MENU OPCOES
+
+
+       System.out.println("---QUAL CONTA VC DESEJA FAZER ?---");
+       System.out.println("- SOMA = 1");
+       System.out.println("- SUBTRAÇAO = 2");
+       System.out.println("- MULTIPLICAÇAO = 3");
+       System.out.println("- MEDIA ARITIMEDICA = 4");
+
+
+       operacao = num.nextInt();
+
+
+       // LOGICA
+
+
+       if (operacao > 4){
+           System.out.println("--- VISH , VOCE NAO DIGITOU UM VALOR CORRESPONDENTE AO MENU!");
+
+
+       }
+
+
+       //SUBTRACAO
+
+
+       if (operacao == 2){
+           System.out.println("---QUAIS NUMEROS SERAO SUBTRAIDOS ?---");
+           System.out.println("PRIMEIRO NUMERO:");
+           num1 = num.nextInt();
+           System.out.println("SEGUNDO NUMERO: ");
+           num2 = num.nextInt();
+           resultado = (num1 - num2);
+           System.out.print("O RESULTADO E " + resultado);
+       }
+
+
+       // SOMA
+
+
+       if (operacao == 1){
+           System.out.println("---QUAIS NUMEROS SERAO SOMADOS ?---");
+
+
+           System.out.println("PRIMEIRO NUMERO:");
+           num1 = num.nextInt();
+           System.out.println("SEGUNDO NUMERO: ");
+           num2 = num.nextInt();
+
+
+           resultado = (num1 + num2);
+           System.out.print("O RESULTADO E " + resultado);
+       }
+
+
+       // MULTIPLICAÇAO
+
+
+       if (operacao == 3){
+           System.out.println("---QUAIS NUMEROS SERAO MULTIPLICADOS");
+           System.out.println("PRIMEIRO NUMERO:");
+           num1 = num.nextInt();
+           System.out.println("SEGUNDO NUMERO: ");
+           num2 = num.nextInt();
+           resultado = (num1 * num2);
+           System.out.print("O RESULTADO E " + resultado);
+       }
+       // MEDIA
+
+
+       if (operacao == 4){
+           System.out.println("---QUANTOS VALORES TEM SUA MEDIA?(ENTRE 2 E 5");
+           int media = num.nextInt();
+
+
+           System.out.println("PRIMEIRO NUMERO:");
+           num1 = num.nextInt();
+           System.out.println("SEGUNDO NUMERO: ");
+           num2 = num.nextInt();
+           if (media >= 3) {
+               System.out.println("TERCEIRO NUMERO:");
+               num3 = num.nextInt();
+           }
+           if (media >= 4) {
+               System.out.println("QUARTO NUMERO:");
+                num4 = num.nextInt();
+           }
+           if (media >= 5) {
+               System.out.println("QUINTO NUMERO:");
+               num5 = num.nextInt();
+           }
+
+
+           somaMed = (num1 + num2 + num3 + num4 + num5 );
+           resultado = (somaMed / media );
+           System.out.print("A MEDIA E " + resultado);
+       }
+   }
+
+
+}
+
+
+
+
+

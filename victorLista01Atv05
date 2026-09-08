@@ -1,0 +1,41 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+
+public class Exercicio5 {
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+
+
+       System.out.print("Digite a temperatura em graus Celsius (°C): ");
+       double celsius = scanner.nextDouble();
+
+
+       System.out.println("Para qual unidade deseja converter?");
+       System.out.println("1 - Fahrenheit (°F)");
+       System.out.println("2 - Kelvin (K)");
+       System.out.print("Escolha uma opção: ");
+       int opcao = scanner.nextInt();
+
+
+     
+           if (opcao = 1 )
+       {
+           double fahrenheit = (celsius * 1.8) + 32;
+           System.out.printf("Temperatura em Fahrenheit: %.2f °F%n", fahrenheit);
+
+
+       } else if (opcao= 2)
+       {
+           double kelvin = celsius + 273.15;
+           System.out.printf("Temperatura em Kelvin: %.2f K%n", kelvin);
+
+
+       } else {
+               System.out.println("Opção inválida! Digite apenas 1 ou 2.");
+           
+       }
+  
+   }
+}
+

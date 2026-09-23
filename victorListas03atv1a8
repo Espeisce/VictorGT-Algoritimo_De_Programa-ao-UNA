@@ -1,0 +1,181 @@
+import java.util.Scanner;
+class LISTA03 {
+public static void main(String[] args) {
+System.out.println("\t..:: LISTA 03 ::..
+");
+System.out.println("Qual exercicio você quer conferir entre 1
+e 8?");
+System.out.println("Digite 0 para sair");
+Scanner dados = new Scanner(System.in);
+int menu;
+menu = dados.nextInt();
+while (menu != 0) {
+switch (menu) {
+case 1:
+System.out.println("\t---EX 01---
+");
+System.out.println("NUMEROS INTEIROS DE 1 A 10");
+int num = 1;
+for (num = 1; num <= 10; num++) {
+System.out.println("NUMERO " + num);
+}
+break;
+case 2:
+System.out.println("\t -- EXERCICIO 2 --
+");
+System.out.println("\tLANÇAMENTO EM 10s");
+int ctng = 10;
+for (ctng = 10; ctng >= 1; ctng--) {
+System.out.println(ctng);
+}
+System.out.println("JA!");
+System.out.println("LANÇADO!");
+break;
+case 3 :
+System.out.println("\t -- EXERCICIO 3 --
+");
+System.out.println("DIGA UM NUMERO E DESCUBRA OS
+PARES ENTRE ELES! (0 ENCERRA O PROGRAMA)");
+num = dados.nextInt();
+while (num != 0){
+for (int par = 2 ; par <= num ; par +=2){
+// System.out.println("\t" + num);
+System.out.print("\t" + par);
+}
+System.out.println("\nDIGA UM NUMERO! (0
+ENCERRA O PROGRAMA)");
+}
+num = dados.nextInt();
+System.out.println("ENCERRANDO...
+");
+break;
+case 4 :
+System.out.println("\t -- EXERCICIO 4 --
+");
+System.out.println("DIGA UM NUMERO!");
+num = dados.nextInt();
+while(num > 0){
+System.out.println("Praticando lógica de
+programação!" );
+num --;
+}
+System.out.println("CONCLUIDO...
+");
+break;
+case 5:
+System.out.println("\t -- EX 05 --
+");
+System.out.println("\nDIGA UM NUMERO E DESCUBRA A
+TABUADA DELE! (0 ENCERRA O PROGRAMA)");
+int mult = 10 ;
+int res;
+num = dados.nextInt();
+while (num != 0){
+for (mult = 10 ; mult >= 0 ; mult--){
+res = num * mult;
+System.out.println("\t" + num + " X " +
+mult + " = "+ res);
+}
+System.out.println("\nDIGA UM NUMERO E
+DESCUBRA A TABUADA DELE! (0 ENCERRA O PROGRAMA)");
+num = dados.nextInt();
+}
+System.out.println("ENCERRANDO...
+");
+case 6:
+int senha = 2026;
+int tentativa;
+int nTentativas=1;
+System.out.println("\t-- DIGITE A SENHA DE 4
+DIGITOS --
+");
+novamente !");
+tentativa = dados.nextInt();
+while (tentativa != senha ) {
+System.out.println("Senha Incorreta ! Tente
+nTentativas ++;
+tentativa = dados.nextInt();
+}
+nTentativas + " tentativas.
+System.out.println("\tACESSO LIBERADO!");
+System.out.println("Você acessou em " +
+");
+break;
+case 7 :
+double nota = 0;
+int alunos = 1;
+double soma = 0;
+double med;
+System.out.println("\t-- MEDIA DAS NOTAS DOS
+ALUNOS --
+");
+System.out.println("Numero negativo finaliza e
+entrega a media !");
+System.out.println("\t - DIGA A NOTA DO ALUNO " +
+alunos + "
+-
+");
+nota = dados.nextDouble();
+while (nota >= 0) {
+soma = soma + nota;
+alunos ++;
+System.out.println("\t - DIGA A NOTA DO ALUNO
+" + alunos + "
+-
+");
+nota = dados.nextDouble();
+}
+alunos = alunos - 1;
+med = soma / alunos;
+System.out.printf("Você digitou " + alunos + "
+notas e a media entre seus Alunos e %.2f .\n"
+, med );
+break;
+case 8:
+double MAvalor = 0;
+double MEvalor = Double.MAX
+_
+double valorAtual ;
+int doadores= 0;
+int doadorTotal;
+double somaT = 0;
+VALUE;
+doadorTotal = dados.nextInt();
+System.out.println("AGORA ME DIGA EM REAIS O
+VALOR DOADO POR CADA DOADOR: ");
+while(doadores < doadorTotal){
+doadores++;
+System.out.println("Doador " + doadores );
+valorAtual = dados.nextDouble();
+somaT = somaT + valorAtual;
+if(valorAtual > MAvalor) {
+MAvalor = valorAtual;
+}
+if( valorAtual < MEvalor ){
+MEvalor = valorAtual;
+}
+}
+System.out.println("OS RESULTADOS DA DOAÇAO SÃO
+:");
+System.out.println("Numero de doadores : " +
+doadores);
+System.out.println("Maior Doação : " + MAvalor +
+" R$");
+System.out.println("Menor Doação : " + MEvalor +
+" R$");
+System.out.println("ENCERRANDO COM O VALOR DE " +
+somaT + " R$ EM DOAÇÕES!");
+break;
+default:
+System.out.println("EU SEI EU TAMBEM ME PERDI EM
+TANTOS EXERCICIOS");
+break;
+}
+System.out.println("Qual exercicio você quer conferir
+entre 1 e 8 ? (0 sai da lista)");
+menu = dados.nextInt();
+}
+System.out.println("SAINDO DA LISTA 03...
+");
+}
+}
